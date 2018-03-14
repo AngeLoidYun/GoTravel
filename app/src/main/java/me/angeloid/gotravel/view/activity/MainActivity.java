@@ -55,4 +55,5 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainAct
     protected void onDestroy() {
         super.onDestroy();
     }
+
 }

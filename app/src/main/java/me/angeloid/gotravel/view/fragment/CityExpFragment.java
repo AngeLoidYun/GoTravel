@@ -17,6 +17,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import me.angeloid.gotravel.R;
 import me.angeloid.gotravel.adapter.CityExpAdapter;
+import me.angeloid.gotravel.adapter.MyItemDecoration;
 import me.angeloid.gotravel.base.BaseFragment;
 import me.angeloid.gotravel.bean.CityExpBean;
 
@@ -65,6 +66,7 @@ public class CityExpFragment extends BaseFragment {
 
         CityExpAdapter cityExpAdapter = new CityExpAdapter(_mActivity, cityExpBeanList);
         recyclerView.setLayoutManager(new LinearLayoutManager(_mActivity));
+        recyclerView.addItemDecoration(new MyItemDecoration());
         recyclerView.setAdapter(cityExpAdapter);
     }
 }

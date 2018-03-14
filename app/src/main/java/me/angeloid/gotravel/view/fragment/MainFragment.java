@@ -85,6 +85,7 @@ public class MainFragment extends BaseFragment<MainFragmentPresenter> implements
     }
 
     private void initView(View view) {
+        mViewPager.setOffscreenPageLimit(5);
         mViewPager.setAdapter(new MainFragmentPagerAdapter(getChildFragmentManager(),
                 getString(R.string.main_tab_cityexp),
                 getString(R.string.main_tab_peertour),

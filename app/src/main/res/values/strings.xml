@@ -7,9 +7,11 @@
     <string name="login_invalid_password">密码不能为空!</string>
     <string name="login_field_required">用户名不能为空!</string>
     <string name="main_tab_cityexp">城市体验</string>
-    <string name="main_tab_peertour">同城约游</string>
+    <string name="main_tab_peertour">同行约游</string>
     <string name="main_tab_touristattraction">城市景点</string>
     <string name="main_tab_personalcenter">个人中心</string>
+
+    <string name="transitionName1">share_element_first</string>
 
     <string name="title_activity_login">Sign in</string>
 
