@@ -47,9 +47,7 @@ public class PeerTourFragment extends BaseFragment implements OnItemClickListene
     }
 
     public static PeerTourFragment newInstance() {
-
         Bundle args = new Bundle();
-
         PeerTourFragment fragment = new PeerTourFragment();
         fragment.setArguments(args);
         return fragment;
@@ -71,7 +69,7 @@ public class PeerTourFragment extends BaseFragment implements OnItemClickListene
         List<PeerTourBean> peerTourBeanList = new ArrayList<>();
         PeerTourBean peerTourBean;
         for (int i = 0; i < 55; i++) {
-            peerTourBean = new PeerTourBean(R.mipmap.ic_launcher_round, "有小哥哥一起去上海迪士尼玩嘛QAQ", 21, "女");
+            peerTourBean = new PeerTourBean(R.mipmap.ic_launcher_round, "有小哥哥一起去上海迪士尼玩嘛QAQ", 23, "女");
             peerTourBeanList.add(peerTourBean);
         }
         PeerTourAdapter peerTourAdapter = new PeerTourAdapter(_mActivity, peerTourBeanList, this);

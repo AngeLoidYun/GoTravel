@@ -29,6 +29,17 @@ public abstract class BaseFragment<P extends BasePresenter> extends MvpFragment<
     }
 
     @Override
+    public void showLoading(String str, String suc) {
+        if(loadingDialog == null){
+            loadingDialog = new LoadingDialog(getContext());
+        }
+        loadingDialog
+                .setLoadingText(str)
+                .setSuccessText(suc)
+                .show();
+    }
+
+    @Override
     public void hideLoading() {
         if(loadingDialog != null){
             loadingDialog.close();
@@ -36,5 +47,11 @@ public abstract class BaseFragment<P extends BasePresenter> extends MvpFragment<
         }
     }
 
-
+    @Override
+    public void hideLoadingWithSuccess() {
+        if(loadingDialog != null){
+            loadingDialog.loadSuccess();
+            loadingDialog = null;
+        }
+    }
 }

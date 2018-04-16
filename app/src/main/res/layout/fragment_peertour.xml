@@ -7,11 +7,34 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/peertour_srl">
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/peertour_recyclerview"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:background="@color/white"
+                android:elevation="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="附近约游"
+                    android:textSize="24sp"
+                    android:textColor="@color/textBlack"
+/>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/peertour_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
     </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 
 </RelativeLayout>

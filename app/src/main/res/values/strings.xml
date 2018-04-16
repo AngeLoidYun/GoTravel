@@ -7,12 +7,24 @@
     <string name="login_invalid_password">密码不能为空!</string>
     <string name="login_field_required">用户名不能为空!</string>
     <string name="main_tab_cityexp">城市体验</string>
-    <string name="main_tab_peertour">同行约游</string>
-    <string name="main_tab_touristattraction">城市景点</string>
+    <string name="main_tab_grouperrands">结伴出行</string>
+    <string name="main_tab_peertour">活动号召</string>
+    <string name="main_tab_touristattraction">城市墙</string>
     <string name="main_tab_personalcenter">个人中心</string>
 
+    <string name="introduction">中山陵是伟大的革命先行者孙中山先生(1866～1925)的陵墓。
+                        中山陵坐北朝南，其中祭堂为仿宫殿式的建筑，建有三道拱门，门楣上刻有“民族，民权，民生”横额。祭堂内放置孙中山先生大理石坐像，壁上刻有孙中山先生手书《建国大纲》全文。
+                   中山陵的主要建筑有：牌坊、墓道、陵门、碑亭、祭堂和墓室等。从空中往下看，中山陵像一座平卧在绿绒毯上的“自由钟”。山下中山先生铜像是钟的尖顶，半月形广场是钟顶圆弧，而陵墓顶端墓室的穹隆顶，就像一颗溜圆的钟摆锤...... </string>
     <string name="transitionName1">share_element_first</string>
 
+
+    <!--CityPicker开始-->
+    <string name="cp_search_hint_text">城市中文名或拼音</string>
+    <string name="cp_cancel">取消</string>
+    <string name="cp_no_result">没有找到，换个词试试~</string>
+    <string name="cp_locate_failed">定位失败</string>
+    <string name="cp_locating">正在定位…</string>
+    <!--CityPicker结束-->
     <string name="title_activity_login">Sign in</string>
 
     <!-- Strings related to login -->

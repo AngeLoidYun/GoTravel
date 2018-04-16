@@ -1,18 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <me.angeloid.gotravel.customview.SearchBar
+        android:id="@+id/cityexp_searchbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="10dp" />
 
     <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/cityexp_srl"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/cityexp_srl">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/cityexp_recyclerview"
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-        </android.support.v7.widget.RecyclerView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分类"/>
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cityexp_classify_rv">
+                    </android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/cityexp_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+        </ScrollView>
+
     </com.scwang.smartrefresh.layout.SmartRefreshLayout>
-</RelativeLayout>
+</LinearLayout>

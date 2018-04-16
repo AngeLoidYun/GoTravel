@@ -2,6 +2,7 @@ package me.angeloid.gotravel.view.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.angeloid.mvplibrary.BasePresenter;
+import com.google.gson.Gson;
+import com.orhanobut.logger.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,17 +21,28 @@ import butterknife.ButterKnife;
 import me.angeloid.gotravel.R;
 import me.angeloid.gotravel.adapter.CityExpAdapter;
 import me.angeloid.gotravel.adapter.MyItemDecoration;
+import me.angeloid.gotravel.adapter.OnGridItemClickListener;
+import me.angeloid.gotravel.adapter.OnItemClickListener;
 import me.angeloid.gotravel.base.BaseFragment;
 import me.angeloid.gotravel.bean.CityExpBean;
+import me.angeloid.gotravel.bean.CityExpResponse;
+import me.angeloid.gotravel.customview.SearchBar;
+import me.angeloid.gotravel.util.JsonParser;
+import me.yokeyword.fragmentation.SupportFragment;
 
 /**
  * Created by sizuru on 18-3-3.
  */
 
-public class CityExpFragment extends BaseFragment {
+public class CityExpFragment extends BaseFragment implements SearchBar.SearchBarListener {
+    @BindView(R.id.cityexp_classify_rv)
+    RecyclerView classifyRv;
     @BindView(R.id.cityexp_recyclerview)
     RecyclerView recyclerView;
+    @BindView(R.id.cityexp_searchbar)
+    SearchBar searchBar;
 
+    private CityExpResponse cityExpResponse;
     @Override
     protected BasePresenter initPresenter() {
         return null;
@@ -43,6 +57,13 @@ public class CityExpFragment extends BaseFragment {
         return fragment;
     }
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Gson gson = new Gson();
+        cityExpResponse = gson.fromJson(JsonParser.getJson("json/cityexp_1.json",_mActivity), CityExpResponse.class);
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -53,20 +74,35 @@ public class CityExpFragment extends BaseFragment {
     }
 
     private void initView(View view) {
-        List<CityExpBean> cityExpBeanList = new ArrayList<>();
-        CityExpBean cityExpBean;
-        for (int i = 0; i < 3; i++) {
-            cityExpBean = new CityExpBean(R.mipmap.ic_launcher_round, "与摄影师去中山陵约片", "￥399");
-            cityExpBeanList.add(cityExpBean);
-            cityExpBean = new CityExpBean(R.mipmap.ic_launcher_round, "和南京小杆子喝正宗 家馄饨", "￥168");
-            cityExpBeanList.add(cityExpBean);
-            cityExpBean = new CityExpBean(R.mipmap.ic_launcher_round, "农家乐体验采摘草莓", "￥288");
-            cityExpBeanList.add(cityExpBean);
-        }
+        searchBar.setSearchBarListener(this);
+        LinearLayoutManager horizontalManager = new LinearLayoutManager(_mActivity,LinearLayoutManager.HORIZONTAL,false);
+        classifyRv.setLayoutManager(horizontalManager);
+        classifyRv.setAdapter();
 
-        CityExpAdapter cityExpAdapter = new CityExpAdapter(_mActivity, cityExpBeanList);
-        recyclerView.setLayoutManager(new LinearLayoutManager(_mActivity));
+
+        CityExpAdapter cityExpAdapter = new CityExpAdapter(_mActivity, cityExpResponse, new OnGridItemClickListener() {
+            @Override
+            public void onItemClick(CityExpBean expBean) {
+                CityExpDetailFragment cityExpDetailFragment = CityExpDetailFragment.newInstance(expBean);
+                ((SupportFragment) getParentFragment()).start(cityExpDetailFragment);
+            }
+        });
+
+        LinearLayoutManager manager = new LinearLayoutManager(_mActivity);
+        recyclerView.setLayoutManager(manager);
         recyclerView.addItemDecoration(new MyItemDecoration());
         recyclerView.setAdapter(cityExpAdapter);
+
+
+    }
+
+    @Override
+    public void locate() {
+        ((SupportFragment) getParentFragment()).start(CityPickerFragment.newInstance());
+    }
+
+    @Override
+    public void search() {
+
     }
 }

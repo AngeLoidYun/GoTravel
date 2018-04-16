@@ -32,7 +32,17 @@ public abstract class BaseActivity<P extends BasePresenter> extends MvpActivity<
     }
 
     @Override
+    public void showLoading(String str, String suc) {
+
+    }
+
+    @Override
     public void hideLoading() {
+
+    }
+
+    @Override
+    public void hideLoadingWithSuccess() {
 
     }
 }

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:elevation="10dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/map_location"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/searchbar_margin"
+        android:id="@+id/searchbar_locate"/>
+
+    <AutoCompleteTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/searchbar_margin"
+        android:layout_weight="1"
+        android:background="@drawable/searchbar_tv_bg"
+        android:maxLines="1"
+        android:padding="9dp"
+        android:textSize="@dimen/txt_large_size" />
+
+    <Button
+        android:id="@+id/searchbar_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/searchbar_margin"
+        android:layout_marginStart="@dimen/searchbar_margin"
+        android:background="@drawable/cp_grid_item_bg"
+        android:text="搜索"
+        android:textSize="@dimen/txt_small_size" />
+</LinearLayout>

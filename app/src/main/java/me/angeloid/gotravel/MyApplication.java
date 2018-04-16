@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 
 import com.angeloid.baselibrary.BaseManager;
 import com.angeloid.netlibrary.HttpManager;
+import com.baidu.mapapi.SDKInitializer;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.DefaultRefreshFooterCreater;
 import com.scwang.smartrefresh.layout.api.DefaultRefreshHeaderCreater;
@@ -54,5 +55,6 @@ public class MyApplication extends Application {
         LeakCanary.install(this);
         BaseManager.init(this,"---BraveMade---",true);
         HttpManager.init(this,GlobalConfig.BASE_URL,GlobalConfig.BASE_URL_OLD);
+        SDKInitializer.initialize(getApplicationContext());
     }
 }

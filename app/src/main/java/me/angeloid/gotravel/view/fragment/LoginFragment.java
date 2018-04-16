@@ -1,6 +1,7 @@
 package me.angeloid.gotravel.view.fragment;
 
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.view.KeyEvent;
@@ -14,7 +15,10 @@ import android.widget.TextView;
 
 import com.angeloid.netlibrary.callback.AbsRxCallback;
 import com.blankj.utilcode.util.ToastUtils;
+import com.orhanobut.logger.Logger;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import butterknife.BindView;
@@ -26,6 +30,8 @@ import me.angeloid.gotravel.R;
 import me.angeloid.gotravel.base.BaseFragment;
 import me.angeloid.gotravel.presenter.LoginFragmentPresenter;
 import me.angeloid.gotravel.view.method.LoginFragmentView;
+import top.zibin.luban.Luban;
+import top.zibin.luban.OnCompressListener;
 
 /**
  * Created by sizuru on 18-3-3.
@@ -51,6 +57,35 @@ public class LoginFragment extends BaseFragment<LoginFragmentPresenter> implemen
         LoginFragment fragment = new LoginFragment();
         fragment.setArguments(args);
         return fragment;
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+//        Luban.with(getContext())
+//                .load(Environment.getExternalStorageDirectory()+"/mypic/cityexp_4_1.jpg")                                   // 传人要压缩的图片列表
+//                .ignoreBy(100)                                  // 忽略不压缩图片的大小
+//                .setTargetDir(Environment.getExternalStorageDirectory()+"")                        // 设置压缩后文件存储位置
+//                .setCompressListener(new OnCompressListener() { //设置回调
+//                    @Override
+//                    public void onStart() {
+//                        // TODO 压缩开始前调用，可以在方法内启动 loading UI
+//                        ToastUtils.showShort("压缩开始！");
+//                    }
+//
+//                    @Override
+//                    public void onSuccess(File file) {
+//                        // TODO 压缩成功后调用，返回压缩后的图片文件
+//                        ToastUtils.showShort("压缩成功！");
+//                    }
+//
+//                    @Override
+//                    public void onError(Throwable e) {
+//                        // TODO 当压缩过程出现问题时调用
+//                        ToastUtils.showShort("压缩失败！");
+//                        e.printStackTrace();
+//                    }
+//                }).launch();    //启动压缩
     }
 
     @Nullable

@@ -1,0 +1,293 @@
+﻿{
+    "page": 0,
+    "data": [
+        {
+            "title": "超人气体验",
+            "typeCount": 55431,
+            "type": 0,
+            "typeResId":"img/cityexp_0.png",
+            "events": [
+                {
+                    "uid": 10000001,
+                    "type": 0,
+                    "eventTitle": "与南京摄影师去中山陵拍照",
+                    "resId": "img/cityexp_0_1.jpg",
+                    "time": "4月30日，周一",
+                    "price": "99元/天",
+                    "star": 4,
+                    "commitCount": 330
+                },
+                {
+                    "uid": 10000002,
+                    "type": 0,
+                    "eventTitle": "与南京摄影师去中山陵拍照",
+                    "resId": "img/cityexp_0_1.jpg",
+                    "time": "4月30日，周一",
+                    "price": "99元/天",
+                    "star": 4,
+                    "commitCount": 330
+                },
+                {
+                    "uid": 10000003,
+                    "type": 0,
+                    "eventTitle": "与南京摄影师去中山陵拍照",
+                    "resId": "img/cityexp_0_1.jpg",
+                    "time": "4月30日，周一",
+                    "price": "99元/天",
+                    "star": 4,
+                    "commitCount": 330
+                },
+                {
+                    "uid": 10000004,
+                    "type": 0,
+                    "eventTitle": "与南京摄影师去中山陵拍照",
+                    "resId": "img/cityexp_0_1.jpg",
+                    "time": "4月30日，周一",
+                    "price": "99元/天",
+                    "star": 4,
+                    "commitCount": 330
+                }
+            ]
+        },
+        {
+            "title": "新体验！实习期优惠",
+            "typeCount": 12,
+            "type": 1,
+            "typeResId":"img/cityexp_1.png",
+            "events": [
+                {
+                    "uid": 11000001,
+                    "type": 1,
+                    "eventTitle": "与南京本地”吃货”品尝“少数人”知道的正宗小吃",
+                    "resId": "img/cityexp_1_1.jpg",
+                    "time": "4月15日，周日",
+                    "price": "39元/次",
+                    "star": 5,
+                    "commitCount": 216
+                },
+                {
+                    "uid": 11000002,
+                    "type": 1,
+                    "eventTitle": "与南京本地”吃货”品尝“少数人”知道的正宗小吃",
+                    "resId": "img/cityexp_1_1.jpg",
+                    "time": "4月15日，周日",
+                    "price": "39元/次",
+                    "star": 5,
+                    "commitCount": 216
+                },
+                {
+                    "uid": 11000003,
+                    "type": 1,
+                    "eventTitle": "与南京本地”吃货”品尝“少数人”知道的正宗小吃",
+                    "resId": "img/cityexp_1_1.jpg",
+                    "time": "4月15日，周日",
+                    "price": "39元/次",
+                    "star": 5,
+                    "commitCount": 216
+                },
+                {
+                    "uid": 11000004,
+                    "type": 1,
+                    "eventTitle": "与南京本地”吃货”品尝“少数人”知道的正宗小吃",
+                    "resId": "img/cityexp_1_1.jpg",
+                    "time": "4月15日，周日",
+                    "price": "39元/次",
+                    "star": 5,
+                    "commitCount": 216
+                }
+            ]
+        },
+        {
+            "title": "亲近大自然的绿色体验",
+            "typeCount": 2445,
+            "type": 2,
+            "typeResId":"img/cityexp_2.png",
+            "events": [
+                {
+                    "uid": 12000001,
+                    "type": 2,
+                    "eventTitle": "在南京郊区体验农家乐",
+                    "resId": "img/cityexp_2_1.jpg",
+                    "time": "4月16日，周一",
+                    "price": "79元/天",
+                    "star": 3,
+                    "commitCount": 198
+                },
+                {
+                    "uid": 12000002,
+                    "type": 2,
+                    "eventTitle": "在南京郊区体验农家乐",
+                    "resId": "img/cityexp_2_1.jpg",
+                    "time": "4月16日，周一",
+                    "price": "79元/天",
+                    "star": 3,
+                    "commitCount": 198
+                },
+                {
+                    "uid": 12000003,
+                    "type": 2,
+                    "eventTitle": "在南京郊区体验农家乐",
+                    "resId": "img/cityexp_2_1.jpg",
+                    "time": "4月16日，周一",
+                    "price": "79元/天",
+                    "star": 3,
+                    "commitCount": 198
+                },
+                {
+                    "uid": 12000004,
+                    "type": 2,
+                    "eventTitle": "在南京郊区体验农家乐",
+                    "resId": "img/cityexp_2_1.jpg",
+                    "time": "4月16日，周一",
+                    "price": "79元/天",
+                    "star": 3,
+                    "commitCount": 198
+                }
+            ]
+        },
+        {
+            "title": "生命在于运动",
+            "typeCount": 276,
+            "type": 3,
+            "typeResId":"img/cityexp_3.png",
+            "events": [
+                {
+                    "uid": 13000001,
+                    "type": 3,
+                    "eventTitle": "登山客带你攀爬紫金山",
+                    "resId": "img/cityexp_3_1.jpg",
+                    "time": "4月18日，周三",
+                    "price": "59元/天",
+                    "star": 4,
+                    "commitCount": 233
+                },
+                {
+                    "uid": 13000002,
+                    "type": 3,
+                    "eventTitle": "登山客带你攀爬紫金山",
+                    "resId": "img/cityexp_3_1.jpg",
+                    "time": "4月18日，周三",
+                    "price": "59元/天",
+                    "star": 4,
+                    "commitCount": 233
+                },
+                {
+                    "uid": 13000003,
+                    "type": 3,
+                    "eventTitle": "登山客带你攀爬紫金山",
+                    "resId": "img/cityexp_3_1.jpg",
+                    "time": "4月18日，周三",
+                    "price": "59元/天",
+                    "star": 4,
+                    "commitCount": 233
+                },
+                {
+                    "uid": 13000004,
+                    "type": 3,
+                    "eventTitle": "登山客带你攀爬紫金山",
+                    "resId": "img/cityexp_3_1.jpg",
+                    "time": "4月18日，周三",
+                    "price": "59元/天",
+                    "star": 4,
+                    "commitCount": 233
+                }
+            ]
+        },
+        {
+            "title": "行万里路，读万卷书",
+            "typeCount": 1877,
+            "type": 4,
+            "typeResId":"img/cityexp_4.png",
+            "events": [
+                {
+                    "uid": 14000001,
+                    "type": 4,
+                    "eventTitle": "历史研究者带你游览/解说南京博物馆",
+                    "resId": "img/cityexp_4_1.jpg",
+                    "time": "4月21日，周六",
+                    "price": "49元/天",
+                    "star": 4,
+                    "commitCount": 2333
+                },
+                {
+                    "uid": 14000002,
+                    "type": 4,
+                    "eventTitle": "历史研究者带你游览/解说南京博物馆",
+                    "resId": "img/cityexp_4_1.jpg",
+                    "time": "4月21日，周六",
+                    "price": "49元/天",
+                    "star": 4,
+                    "commitCount": 2333
+                },
+                {
+                    "uid": 14000003,
+                    "type": 4,
+                    "eventTitle": "历史研究者带你游览/解说南京博物馆",
+                    "resId": "img/cityexp_4_1.jpg",
+                    "time": "4月21日，周六",
+                    "price": "49元/天",
+                    "star": 4,
+                    "commitCount": 2333
+                },
+                {
+                    "uid": 14000004,
+                    "type": 4,
+                    "eventTitle": "历史研究者带你游览/解说南京博物馆",
+                    "resId": "img/cityexp_4_1.jpg",
+                    "time": "4月21日，周六",
+                    "price": "49元/天",
+                    "star": 4,
+                    "commitCount": 2333
+                }
+            ]
+        },
+        {
+            "title": "家庭的欢乐时光",
+            "typeCount": 2147,
+            "type": 5,
+            "typeResId":"img/cityexp_5.png",
+            "events": [
+                {
+                    "uid": 15000001,
+                    "type": 5,
+                    "eventTitle": "采摘横溪西瓜",
+                    "resId": "img/cityexp_5_1.jpg",
+                    "time": "4月22日，周日",
+                    "price": "26元/天",
+                    "star": 5,
+                    "commitCount": 139
+                },
+                {
+                    "uid": 15000002,
+                    "type": 5,
+                    "eventTitle": "采摘横溪西瓜",
+                    "resId": "img/cityexp_5_1.jpg",
+                    "time": "4月22日，周日",
+                    "price": "26元/天",
+                    "star": 5,
+                    "commitCount": 139
+                },
+                {
+                    "uid": 15000003,
+                    "type": 5,
+                    "eventTitle": "采摘横溪西瓜",
+                    "resId": "img/cityexp_5_1.jpg",
+                    "time": "4月22日，周日",
+                    "price": "26元/天",
+                    "star": 5,
+                    "commitCount": 139
+                },
+                {
+                    "uid": 15000004,
+                    "type": 5,
+                    "eventTitle": "采摘横溪西瓜",
+                    "resId": "img/cityexp_5_1.jpg",
+                    "time": "4月22日，周日",
+                    "price": "26元/天",
+                    "star": 5,
+                    "commitCount": 139
+                }
+            ]
+        }
+    ]
+}

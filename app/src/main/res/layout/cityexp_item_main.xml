@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_ripple"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:id="@+id/cityexp_item_main_container">
+
+    <ImageView
+        android:id="@+id/cityexp_item_main_iv"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_gravity="center"
+        android:src="@mipmap/ic_launcher_round" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/cityexp_item_main_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="与摄影师去中山陵拍照"
+            android:textColor="@color/textBlack"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/cityexp_item_main_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:visibility="gone"
+            android:text="3月5日，周日" />
+
+        <TextView
+            android:id="@+id/cityexp_item_main_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="50元/半天" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp">
+
+            <RatingBar
+                style="@style/Base.Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="true"
+                android:rating="4"
+                android:stepSize="1"
+                android:id="@+id/cityexp_item_main_star"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30评论"
+                android:id="@+id/cityexp_item_main_commitcount"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

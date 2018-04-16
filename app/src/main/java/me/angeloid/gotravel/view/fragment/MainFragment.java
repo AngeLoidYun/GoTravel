@@ -88,14 +88,12 @@ public class MainFragment extends BaseFragment<MainFragmentPresenter> implements
         mViewPager.setOffscreenPageLimit(5);
         mViewPager.setAdapter(new MainFragmentPagerAdapter(getChildFragmentManager(),
                 getString(R.string.main_tab_cityexp),
+                getString(R.string.main_tab_grouperrands),
                 getString(R.string.main_tab_peertour),
                 getString(R.string.main_tab_touristattraction),
                 getString(R.string.main_tab_personalcenter)));
         mTab.setupWithViewPager(mViewPager);
     }
-
-
-
 
 
 //
@@ -190,12 +188,15 @@ public class MainFragment extends BaseFragment<MainFragmentPresenter> implements
                 return CityExpFragment.newInstance();
             }
             if (position == 1) {
-                return PeerTourFragment.newInstance();
+                return GroupErrandsFragment.newInstance();
             }
             if (position == 2) {
-                return TouristAttractionFragment.newInstance();
+                return PeerTourFragment.newInstance();
             }
             if (position == 3) {
+                return TouristAttractionFragment.newInstance();
+            }
+            if (position == 4) {
                 return PersonalCenterFragment.newInstance();
             }
             return null;

@@ -43,7 +43,7 @@ public class PeerTourAdapter extends RecyclerView.Adapter<PeerTourAdapter.PeerTo
     public void onBindViewHolder(final PeerTourViewHolder holder, int position) {
         holder.title.setText(peerTourBeans.get(position).getTitle());
         holder.sex.setText(peerTourBeans.get(position).getSex());
-        holder.age.setText(String.valueOf(peerTourBeans.get(position).getAge()));
+        holder.age.setText(String.valueOf(peerTourBeans.get(position).getAge())+"岁");
         // 把每个图片视图设置不同的Transition名称, 防止在一个视图内有多个相同的名称, 在变换的时候造成混乱
         // Fragment支持多个View进行变换, 使用适配器时, 需要加以区分
         ViewCompat.setTransitionName(holder.imageView, context.getResources().getString(R.string.transitionName1) + position);

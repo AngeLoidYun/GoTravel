@@ -18,7 +18,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import me.angeloid.gotravel.R;
 import me.angeloid.gotravel.adapter.MyItemDecoration;
-import me.angeloid.gotravel.adapter.MyLinearLayoutManager;
 import me.angeloid.gotravel.adapter.PeerTourDetailAdapter;
 import me.angeloid.gotravel.base.BaseFragment;
 import me.angeloid.gotravel.presenter.PeerTourDetailPresenter;
@@ -34,8 +33,9 @@ public class PeerTourDetailFragment extends BaseFragment<PeerTourDetailPresenter
     RecyclerView recyclerView;
     @BindView(R.id.peertourdetail_srl)
     SmartRefreshLayout smartRefreshLayout;
-@BindView(R.id.peertourdetail_head)
+    @BindView(R.id.peertourdetail_head)
     ImageView imageView;
+
     @Override
     protected PeerTourDetailPresenter initPresenter() {
         return new PeerTourDetailPresenter(this);
@@ -43,7 +43,7 @@ public class PeerTourDetailFragment extends BaseFragment<PeerTourDetailPresenter
 
     public static PeerTourDetailFragment newInstance(int position) {
         Bundle args = new Bundle();
-        args.putInt("number",position);
+        args.putInt("number", position);
         PeerTourDetailFragment fragment = new PeerTourDetailFragment();
         fragment.setArguments(args);
         return fragment;
@@ -52,9 +52,9 @@ public class PeerTourDetailFragment extends BaseFragment<PeerTourDetailPresenter
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             setSharedElementReturnTransition(TransitionInflater.from(getContext())
-            .inflateTransition(android.R.transition.move));
+                    .inflateTransition(android.R.transition.move));
         }
     }
 
@@ -70,11 +70,18 @@ public class PeerTourDetailFragment extends BaseFragment<PeerTourDetailPresenter
     private void initView() {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
-        imageView.setTransitionName(getString(R.string.transitionName1)+getArguments().getInt("number"));
+        imageView.setTransitionName(getString(R.string.transitionName1) + getArguments().getInt("number"));
         PeerTourDetailAdapter peerTourDetailAdapter = new PeerTourDetailAdapter(getContext());
         recyclerView.addItemDecoration(new MyItemDecoration());
         recyclerView.setAdapter(peerTourDetailAdapter);
+        recyclerView.setNestedScrollingEnabled(false);
         smartRefreshLayout.setEnableLoadmore(false);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                start(PeopleAroundFragment.newInstance());
+            }
+        });
     }
 
 

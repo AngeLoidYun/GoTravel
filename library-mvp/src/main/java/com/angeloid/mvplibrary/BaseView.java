@@ -11,8 +11,11 @@ public interface BaseView {
      */
     void showLoading(String str);
 
+    void showLoading(String str,String suc);
     /**
      * 隐藏加载框
      */
     void hideLoading();
+
+    void hideLoadingWithSuccess();
 }
