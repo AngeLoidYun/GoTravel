@@ -1,0 +1,26 @@
+﻿{
+    "page": 0,
+    "data": [
+        {
+            "imgResId": "face/face_1.jpg",
+            "userName": "渣渣玮",
+            "sex": 0,
+            "signature": "不要让三思而后行成为只思不行的借口",
+            "distance": 1.5
+        },
+        {
+            "imgResId": "face/face_2.jpg",
+            "userName": "叮叮",
+            "sex": 1,
+            "signature": "Be present with gratitude,kindness,courage and love.",
+            "distance": 2.7
+        },
+        {
+            "imgResId": "face/face_3.jpg",
+            "userName": "啦啦",
+            "sex": 1,
+            "signature": "你大概是已经忘了 该如何起舞",
+            "distance": 7.9
+        }
+    ]
+}

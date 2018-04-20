@@ -1,0 +1,26 @@
+﻿{
+    "page": 0,
+    "data": [
+        {
+            "imgResId": "face/face_4.jpg",
+            "userName": "CiCi",
+            "sex": 2,
+            "signature": "从前马车很慢，一生只够爱一个人",
+            "distance": 2.1
+        },
+        {
+            "imgResId": "face/face_5.jpg",
+            "userName": "Duo",
+            "sex": 0,
+            "signature": "不负花开，不待来日",
+            "distance": 12.1
+        },
+        {
+            "imgResId": "face/face_6.jpg",
+            "userName": "啦啦",
+            "sex": 1,
+            "signature": "汪家馄饨赛高！",
+            "distance": 15.3
+        }
+    ]
+}
