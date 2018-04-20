@@ -143,7 +143,7 @@ public class CityPickerFragment extends BaseFragment implements TextWatcher,
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         mContentView = inflater.inflate(R.layout.cp_dialog_city_picker, container, false);
 
-        mRecyclerView = mContentView.findViewById(R.id.cp_city_recyclerview);
+        mRecyclerView = (RecyclerView) mContentView.findViewById(R.id.cp_city_recyclerview);
         mLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setHasFixedSize(true);
@@ -154,17 +154,17 @@ public class CityPickerFragment extends BaseFragment implements TextWatcher,
         mRecyclerView.setAdapter(mAdapter);
 
         mEmptyView = mContentView.findViewById(R.id.cp_empty_view);
-        mOverlayTextView = mContentView.findViewById(R.id.cp_overlay);
+        mOverlayTextView = (TextView) mContentView.findViewById(R.id.cp_overlay);
 
-        mIndexBar = mContentView.findViewById(R.id.cp_side_index_bar);
+        mIndexBar = (SideIndexBar) mContentView.findViewById(R.id.cp_side_index_bar);
         mIndexBar.setOverlayTextView(mOverlayTextView)
                 .setOnIndexChangedListener(this);
 
-        mSearchBox = mContentView.findViewById(R.id.cp_search_box);
+        mSearchBox = (EditText) mContentView.findViewById(R.id.cp_search_box);
         mSearchBox.addTextChangedListener(this);
 
-        mCancelBtn = mContentView.findViewById(R.id.cp_cancel);
-        mClearAllBtn = mContentView.findViewById(R.id.cp_clear_all);
+        mCancelBtn = (TextView) mContentView.findViewById(R.id.cp_cancel);
+        mClearAllBtn = (ImageView) mContentView.findViewById(R.id.cp_clear_all);
         mCancelBtn.setOnClickListener(this);
         mClearAllBtn.setOnClickListener(this);
 

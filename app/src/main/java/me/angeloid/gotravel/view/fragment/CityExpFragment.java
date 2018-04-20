@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.angeloid.mvplibrary.BasePresenter;
+import com.blankj.utilcode.util.ToastUtils;
 import com.google.gson.Gson;
 import com.orhanobut.logger.Logger;
 
@@ -20,6 +21,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import me.angeloid.gotravel.R;
 import me.angeloid.gotravel.adapter.CityExpAdapter;
+import me.angeloid.gotravel.adapter.CityExpClassifyAdapter;
 import me.angeloid.gotravel.adapter.MyItemDecoration;
 import me.angeloid.gotravel.adapter.OnGridItemClickListener;
 import me.angeloid.gotravel.adapter.OnItemClickListener;
@@ -75,9 +77,15 @@ public class CityExpFragment extends BaseFragment implements SearchBar.SearchBar
 
     private void initView(View view) {
         searchBar.setSearchBarListener(this);
+        CityExpClassifyAdapter cityExpClassifyAdapter = new CityExpClassifyAdapter(_mActivity, cityExpResponse, new CityExpClassifyAdapter.OnClassifyItemClickListener() {
+            @Override
+            public void onItemClick(String classify) {
+                ToastUtils.showShort(classify);
+            }
+        });
         LinearLayoutManager horizontalManager = new LinearLayoutManager(_mActivity,LinearLayoutManager.HORIZONTAL,false);
         classifyRv.setLayoutManager(horizontalManager);
-        classifyRv.setAdapter();
+        classifyRv.setAdapter(cityExpClassifyAdapter);
 
 
         CityExpAdapter cityExpAdapter = new CityExpAdapter(_mActivity, cityExpResponse, new OnGridItemClickListener() {

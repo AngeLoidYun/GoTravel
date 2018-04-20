@@ -81,8 +81,8 @@ public class PickerGridListAdapter extends RecyclerView.Adapter<PickerGridListAd
 
         public GridViewHolder(View itemView) {
             super(itemView);
-            container = itemView.findViewById(R.id.cp_grid_item_layout);
-            name = itemView.findViewById(R.id.cp_gird_item_name);
+            container = (FrameLayout) itemView.findViewById(R.id.cp_grid_item_layout);
+            name = (TextView) itemView.findViewById(R.id.cp_gird_item_name);
         }
     }
 

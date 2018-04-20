@@ -30,8 +30,6 @@ import me.angeloid.gotravel.R;
 import me.angeloid.gotravel.base.BaseFragment;
 import me.angeloid.gotravel.presenter.LoginFragmentPresenter;
 import me.angeloid.gotravel.view.method.LoginFragmentView;
-import top.zibin.luban.Luban;
-import top.zibin.luban.OnCompressListener;
 
 /**
  * Created by sizuru on 18-3-3.

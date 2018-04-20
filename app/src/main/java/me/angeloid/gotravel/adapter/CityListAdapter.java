@@ -177,7 +177,7 @@ public class CityListAdapter extends RecyclerView.Adapter<CityListAdapter.BaseVi
 
         DefaultViewHolder(View itemView) {
             super(itemView);
-            name = itemView.findViewById(R.id.cp_list_item_name);
+            name = (TextView) itemView.findViewById(R.id.cp_list_item_name);
         }
     }
 
@@ -186,7 +186,7 @@ public class CityListAdapter extends RecyclerView.Adapter<CityListAdapter.BaseVi
 
         HotViewHolder(View itemView) {
             super(itemView);
-            mRecyclerView = itemView.findViewById(R.id.cp_hot_list);
+            mRecyclerView = (RecyclerView) itemView.findViewById(R.id.cp_hot_list);
             mRecyclerView.setHasFixedSize(true);
             mRecyclerView.setLayoutManager(new GridLayoutManager(itemView.getContext(),
                     PickerGridListAdapter.SPAN_COUNT, LinearLayoutManager.VERTICAL, false));
@@ -202,8 +202,8 @@ public class CityListAdapter extends RecyclerView.Adapter<CityListAdapter.BaseVi
 
         LocationViewHolder(View itemView) {
             super(itemView);
-            container = itemView.findViewById(R.id.cp_list_item_location_layout);
-            current = itemView.findViewById(R.id.cp_list_item_location);
+            container = (FrameLayout) itemView.findViewById(R.id.cp_list_item_location_layout);
+            current = (TextView) itemView.findViewById(R.id.cp_list_item_location);
         }
     }
 }

@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <com.scwang.smartrefresh.layout.SmartRefreshLayout
@@ -31,6 +32,22 @@
                         android:scaleType="fitXY"
                         android:src="@drawable/peertourdetail_head_bg" />
 
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/chuck_ic_share_white_24dp"
+                        android:layout_alignEnd="@id/cityexp_detail_head_bg"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:id="@+id/cityexp_detail_head_shareview"/>
+                    
+                    <com.jaren.lib.view.LikeView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@id/cityexp_detail_head_bg"
+                        android:layout_alignBottom="@id/cityexp_detail_head_bg"
+                        android:id="@+id/cityexp_detail_head_likeview"/>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -40,11 +57,11 @@
                         android:paddingStart="20dp">
 
                         <TextView
+                            android:id="@+id/cityexp_detail_title"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:layout_marginTop="20dp"
-                            android:id="@+id/cityexp_detail_title"
                             android:text="XXXXX"
                             android:textColor="@color/textBlack"
                             android:textSize="22sp" />
@@ -76,6 +93,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="15dp"
                             android:text="@string/introduction" />
+
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -91,6 +109,7 @@
                             android:isIndicator="true"
                             android:rating="4"
                             android:stepSize="1" />
+
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -132,6 +151,7 @@
 
 
     </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -146,11 +166,11 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/cityexp_detail_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="50元/天"
-                android:id="@+id/cityexp_detail_price"
                 android:textColor="@color/textBlack"
                 android:textSize="18sp" />
 
@@ -163,12 +183,12 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/cityexp_detail_complete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:layout_marginEnd="10dp"
-            android:id="@+id/cityexp_detail_complete"
             android:text="预约" />
     </RelativeLayout>
 </LinearLayout>

@@ -12,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.angeloid.mvplibrary.BasePresenter;
+import com.blankj.utilcode.util.ToastUtils;
+import com.jaren.lib.view.LikeView;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 
 import butterknife.BindView;
@@ -42,6 +44,10 @@ public class CityExpDetailFragment extends BaseFragment<CityExpDetailPresenter> 
     TextView priceTv;
     @BindView(R.id.cityexp_detail_complete)
     Button completeBtn;
+    @BindView(R.id.cityexp_detail_head_likeview)
+    LikeView likeView;
+    @BindView(R.id.cityexp_detail_head_shareview)
+    ImageView shareIv;
     private CityExpBean cityExpBean;
 
     @Override
@@ -68,7 +74,7 @@ public class CityExpDetailFragment extends BaseFragment<CityExpDetailPresenter> 
     }
 
     private void initView(View view) {
-        titleIv.setImageBitmap(ImageFromAssets.getImageFromAssetsFile(cityExpBean.getResId(),getContext()));
+        titleIv.setImageBitmap(ImageFromAssets.getImageFromAssetsFile(cityExpBean.getResId(), getContext()));
         titleTv.setText(cityExpBean.getEventTitle());
         priceTv.setText(cityExpBean.getPrice());
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
@@ -82,6 +88,21 @@ public class CityExpDetailFragment extends BaseFragment<CityExpDetailPresenter> 
             @Override
             public void onClick(View v) {
                 start(PayFragment.newInstance());
+            }
+        });
+        shareIv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ToastUtils.showShort("分享！");
+            }
+        });
+        likeView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (likeView.isChecked())
+                    ToastUtils.showShort("已关注！");
+                else
+                    ToastUtils.showShort("取消关注！");
             }
         });
     }

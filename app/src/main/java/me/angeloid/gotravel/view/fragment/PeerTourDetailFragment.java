@@ -83,6 +83,4 @@ public class PeerTourDetailFragment extends BaseFragment<PeerTourDetailPresenter
             }
         });
     }
-
-
 }

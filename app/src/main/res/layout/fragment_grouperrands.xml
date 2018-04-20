@@ -3,4 +3,63 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/grouperrands_matched_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/groupErrands_title_margin_vertical"
+                    android:paddingStart="@dimen/groupErrands_title_margin_start"
+                    android:paddingTop="@dimen/groupErrands_title_margin_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="已匹配的朋友"
+                        android:textColor="@color/textBlack"
+                        android:textSize="@dimen/txt_large_size" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/grouperrands_matched_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:id="@+id/grouperrands_unmatched_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/groupErrands_title_margin_vertical"
+                    android:paddingStart="@dimen/groupErrands_title_margin_start"
+                    android:paddingTop="@dimen/groupErrands_title_margin_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="新朋友"
+                        android:textColor="@color/textBlack"
+                        android:textSize="@dimen/txt_large_size" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/grouperrands_unmatched_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </ScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
 </RelativeLayout>
