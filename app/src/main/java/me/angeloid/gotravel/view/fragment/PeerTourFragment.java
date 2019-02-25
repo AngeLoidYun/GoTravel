@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.angeloid.mvplibrary.BasePresenter;
+import com.google.gson.Gson;
 import com.orhanobut.logger.Logger;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 
@@ -27,8 +28,12 @@ import me.angeloid.gotravel.adapter.OnItemClickListener;
 import me.angeloid.gotravel.adapter.PeerTourAdapter;
 import me.angeloid.gotravel.base.BaseFragment;
 import me.angeloid.gotravel.bean.CityExpBean;
+import me.angeloid.gotravel.bean.CityExpResponse;
 import me.angeloid.gotravel.bean.PeerTourBean;
+import me.angeloid.gotravel.bean.PeerTourResponse;
+import me.angeloid.gotravel.customview.SearchBar;
 import me.angeloid.gotravel.helper.DetailTransition;
+import me.angeloid.gotravel.util.JsonParser;
 import me.yokeyword.fragmentation.SupportFragment;
 
 /**
@@ -36,11 +41,16 @@ import me.yokeyword.fragmentation.SupportFragment;
  */
 
 public class PeerTourFragment extends BaseFragment implements OnItemClickListener {
+    /**
+     * 活动号召界面
+     */
     @BindView(R.id.peertour_recyclerview)
     RecyclerView recyclerView;
     @BindView(R.id.peertour_srl)
     SmartRefreshLayout smartRefreshLayout;
-
+@BindView(R.id.peertour_searchbar)
+    SearchBar searchBar;
+    private PeerTourResponse peerTourResponse;
     @Override
     protected BasePresenter initPresenter() {
         return null;
@@ -53,9 +63,17 @@ public class PeerTourFragment extends BaseFragment implements OnItemClickListene
         return fragment;
     }
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        Gson gson = new Gson();
+        peerTourResponse = gson.fromJson(JsonParser.getJson("json/peertour_1.json",_mActivity), PeerTourResponse.class);
         View view = inflater.inflate(R.layout.fragment_peertour, container, false);
         ButterKnife.bind(this, view);
         initView(view);
@@ -63,16 +81,22 @@ public class PeerTourFragment extends BaseFragment implements OnItemClickListene
     }
 
     private void initView(View view) {
+        searchBar.setSearchBarListener(new SearchBar.SearchBarListener() {
+            @Override
+            public void locate() {
+                PeerTourMapFragment peerTourMapFragment = PeerTourMapFragment.newInstance();
+                ((SupportFragment) getParentFragment()).start(peerTourMapFragment,SINGLETOP);
+            }
+
+            @Override
+            public void search() {
+
+            }
+        });
         smartRefreshLayout.setEnableRefresh(false);
         smartRefreshLayout.setEnableLoadmore(false);
         smartRefreshLayout.setEnableOverScrollDrag(true);
-        List<PeerTourBean> peerTourBeanList = new ArrayList<>();
-        PeerTourBean peerTourBean;
-        for (int i = 0; i < 55; i++) {
-            peerTourBean = new PeerTourBean(R.mipmap.ic_launcher_round, "有小哥哥一起去上海迪士尼玩嘛QAQ", 23, "女");
-            peerTourBeanList.add(peerTourBean);
-        }
-        PeerTourAdapter peerTourAdapter = new PeerTourAdapter(_mActivity, peerTourBeanList, this);
+        PeerTourAdapter peerTourAdapter = new PeerTourAdapter(_mActivity, peerTourResponse.getData(), this);
         recyclerView.setLayoutManager(new LinearLayoutManager(_mActivity));
         recyclerView.addItemDecoration(new MyItemDecoration());
         recyclerView.setAdapter(peerTourAdapter);

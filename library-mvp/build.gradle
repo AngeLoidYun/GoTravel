@@ -20,9 +20,9 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-
-    compile ('me.yokeyword:fragmentation:1.2.5')
-            {exclude group:"com.android.support"}
+    compile 'com.android.support:support-v4:25.+'
+    compile 'com.android.support:appcompat-v7:25.+'
+    compile 'me.yokeyword:fragmentation:1.2.5'
     compile 'me.yokeyword:eventbus-activity-scope:1.1.0'
     compile 'org.greenrobot:eventbus:3.1.1'
     compile project(':library-net')

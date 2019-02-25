@@ -3,69 +3,117 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/item_ripple"
+    android:orientation="vertical"
     android:padding="15dp">
 
-    <ImageView
-        android:id="@+id/peertour_item_main_iv"
+    <!--<ImageView-->
+    <!--android:id="@+id/peertour_item_main_iv"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:src="@mipmap/ic_launcher_round"-->
+    <!--android:transitionName="@string/transitionName1" />-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_marginStart="10dp">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center_vertical"-->
+    <!--android:layout_weight="1"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/peertour_item_title"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:ellipsize="end"-->
+    <!--android:singleLine="true"-->
+    <!--android:text="有一起约上海迪士尼的妹子嘛ヽ(≧Д≦)ノ"-->
+    <!--android:textColor="@color/textBlack"-->
+    <!--android:textSize="16sp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/peertour_item_sex"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--android:text="女"-->
+    <!--android:textSize="12sp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/peertour_item_age"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--android:text="22岁"-->
+    <!--android:textSize="12sp" />-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center_vertical"-->
+    <!--android:orientation="vertical"-->
+    <!--android:layout_marginStart="10dp">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="相距1.2公里"-->
+    <!--android:textColor="@color/textBlack" />-->
+    <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher_round"
-        android:transitionName="@string/transitionName1" />
+        android:text="活动名称" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="10dp">
+        android:text="与南京摄影师去中山陵拍照"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/txt_middle_size"
+        android:id="@+id/peertour_item_title"/>
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="1"
-            android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="活动时间"
+        android:textSize="@dimen/txt_small_size" />
 
-            <TextView
-                android:id="@+id/peertour_item_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:singleLine="true"
-                android:text="有一起约上海迪士尼的妹子嘛ヽ(≧Д≦)ノ"
-                android:textColor="@color/textBlack"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/peertour_item_sex"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="女"
-                android:textSize="12sp" />
-
-            <TextView
-                android:id="@+id/peertour_item_age"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="22岁"
-                android:textSize="12sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:orientation="vertical"
-            android:layout_marginStart="10dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="相距1.2公里"
-                android:textColor="@color/textBlack" />
-        </LinearLayout>
-    </LinearLayout>
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2018年4月23日 11:33:08"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/txt_middle_size"
+        android:id="@+id/peertour_item_time"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="活动地点"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="中山陵"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/txt_middle_size"
+        android:id="@+id/peertour_item_place"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="其他信息"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/txt_middle_size"
+        android:textColor="@color/textBlack"
+        android:text="没什么其它信息了"
+        android:id="@+id/peertour_item_details"/>
 
 </LinearLayout>

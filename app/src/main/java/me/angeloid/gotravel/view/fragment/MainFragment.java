@@ -37,14 +37,10 @@ import me.yokeyword.fragmentation.SupportFragment;
 public class MainFragment extends BaseFragment<MainFragmentPresenter> implements MainFragmentView {
 
     private SupportFragment[] mFragments = new SupportFragment[4];
-    public static final int PHONE = 0;
-    public static final int PAD = 1;
-    public static final int ROBOT = 2;
-    public static final int ALL = 3;
+
     /**
      * 启动fragment、activity的requestcode
      */
-    private static final int ROBOT_TYPE_SELECT_CODE = 0x01;
     //******************************view开始*********************************
     /**
      *

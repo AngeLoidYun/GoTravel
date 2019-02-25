@@ -49,6 +49,9 @@ public class PeopleAroundFragment extends BaseFragment {
     MapView mapView;
     private BaiduMap mBaiduMap;
     private BitmapDescriptor bitmapDescriptor;
+
+    private BDLocation lastLocation;
+
     @Override
     protected BasePresenter initPresenter() {
         return null;
@@ -126,6 +129,13 @@ public class PeopleAroundFragment extends BaseFragment {
                 return;
             }
             Logger.i("onReceiveLocation");
+//            if (lastLocation != null) {
+//                if (lastLocation.getLatitude() == location.getLatitude() && lastLocation.getLongitude() == location.getLongitude()) {
+//                    Log.d("map", "same location, skip refresh");
+//                    // mMapView.refresh(); //need this refresh?
+//                    return;
+//                }
+//            }
             //Receive Location
             StringBuffer sb = new StringBuffer(256);
             sb.append("time : ");

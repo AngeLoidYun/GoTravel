@@ -11,6 +11,6 @@ import me.angeloid.gotravel.bean.CityExpBean;
  * wechat:flydexin
  */
 
-public interface OnGridItemClickListener {
-    void onItemClick(CityExpBean expBean);
+public interface OnGridItemClickListener<T> {
+    void onItemClick(T bean);
 }

@@ -5,24 +5,16 @@ package me.angeloid.gotravel.bean;
  */
 
 public class PeerTourBean {
-    private int imgResId;
     private String title;
-    private int age;
-    private String sex;
+    private String time;
+    private String place;
+    private String details;
 
-    public PeerTourBean(int imgResId, String title, int age, String sex) {
-        this.imgResId = imgResId;
+    public PeerTourBean(String title, String time, String place, String details) {
         this.title = title;
-        this.age = age;
-        this.sex = sex;
-    }
-
-    public int getImgResId() {
-        return imgResId;
-    }
-
-    public void setImgResId(int imgResId) {
-        this.imgResId = imgResId;
+        this.time = time;
+        this.place = place;
+        this.details = details;
     }
 
     public String getTitle() {
@@ -33,19 +25,27 @@ public class PeerTourBean {
         this.title = title;
     }
 
-    public int getAge() {
-        return age;
+    public String getTime() {
+        return time;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setTime(String time) {
+        this.time = time;
     }
 
-    public String getSex() {
-        return sex;
+    public String getPlace() {
+        return place;
     }
 
-    public void setSex(String sex) {
-        this.sex = sex;
+    public void setPlace(String place) {
+        this.place = place;
+    }
+
+    public String getDetails() {
+        return details;
+    }
+
+    public void setDetails(String details) {
+        this.details = details;
     }
 }

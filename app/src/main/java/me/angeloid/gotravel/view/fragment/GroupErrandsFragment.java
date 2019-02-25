@@ -30,6 +30,9 @@ import me.angeloid.gotravel.util.JsonParser;
  */
 
 public class GroupErrandsFragment extends BaseFragment {
+    /**
+     * 结伴出行界面
+     */
     @BindView(R.id.grouperrands_matched_rv)
     RecyclerView groupErrandsMatchedRv;
     @BindView(R.id.grouperrands_unmatched_rv)
@@ -55,14 +58,15 @@ public class GroupErrandsFragment extends BaseFragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Gson gson = new Gson();
-        groupErrandsMatchedBeans = gson.fromJson(JsonParser.getJson("json/groupErrands_1.json", _mActivity), GroupErrandsResponse.class).getData();
-        groupErrandsUnmatchedBeans = gson.fromJson(JsonParser.getJson("json/groupErrands_2.json", _mActivity), GroupErrandsResponse.class).getData();
+
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        Gson gson = new Gson();
+        groupErrandsMatchedBeans = gson.fromJson(JsonParser.getJson("json/groupErrands_1.json", _mActivity), GroupErrandsResponse.class).getData();
+        groupErrandsUnmatchedBeans = gson.fromJson(JsonParser.getJson("json/groupErrands_2.json", _mActivity), GroupErrandsResponse.class).getData();
         View view = inflater.inflate(R.layout.fragment_grouperrands, container, false);
         ButterKnife.bind(this, view);
         initView(view);

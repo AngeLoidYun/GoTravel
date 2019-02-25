@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/map" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/peertour_map_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/ic_arrow_back_black_36dp"
+        app:civ_circle_background_color="#88888888" />
+
+    <ImageView
+        android:id="@+id/peertour_map_iv1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/peertour_map_back"
+        android:layout_marginEnd="116dp"
+        android:layout_marginTop="179dp"
+        android:src="@drawable/map_location" />
+
+    <ImageView
+        android:id="@+id/peertour_map_iv2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/peertour_map_iv1"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="16dp"
+        android:layout_toEndOf="@+id/peertour_map_back"
+        android:src="@drawable/map_location" />
+
+    <ImageView
+        android:id="@+id/peertour_map_iv3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/peertour_map_back"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="12dp"
+        android:layout_toEndOf="@+id/peertour_map_iv2"
+        android:src="@drawable/map_location" />
+
+    <ImageView
+        android:id="@+id/peertour_map_iv4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/peertour_map_iv3"
+        android:layout_below="@+id/peertour_map_iv2"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="43dp"
+        android:src="@drawable/map_location" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#CCCCCCCC"
+        android:orientation="vertical"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        android:id="@+id/peertour_map_info"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="活动名称" />
+
+        <TextView
+            android:id="@+id/peertour_map_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/textBlack"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="活动时间" />
+
+        <TextView
+            android:id="@+id/peertour_map_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/textBlack"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="活动地点" />
+
+        <TextView
+            android:id="@+id/peertour_map_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/textBlack"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="其它信息"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/peertour_map_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/textBlack"
+            android:layout_marginBottom="10dp"/>
+    </LinearLayout>
+</RelativeLayout>

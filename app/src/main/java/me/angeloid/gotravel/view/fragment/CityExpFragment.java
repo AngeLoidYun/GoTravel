@@ -62,13 +62,13 @@ public class CityExpFragment extends BaseFragment implements SearchBar.SearchBar
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Gson gson = new Gson();
-        cityExpResponse = gson.fromJson(JsonParser.getJson("json/cityexp_1.json",_mActivity), CityExpResponse.class);
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        Gson gson = new Gson();
+        cityExpResponse = gson.fromJson(JsonParser.getJson("json/cityexp_1.json",_mActivity), CityExpResponse.class);
         View view = inflater.inflate(R.layout.fragment_cityexp, container, false);
         ButterKnife.bind(this, view);
         initView(view);
@@ -88,7 +88,7 @@ public class CityExpFragment extends BaseFragment implements SearchBar.SearchBar
         classifyRv.setAdapter(cityExpClassifyAdapter);
 
 
-        CityExpAdapter cityExpAdapter = new CityExpAdapter(_mActivity, cityExpResponse, new OnGridItemClickListener() {
+        CityExpAdapter cityExpAdapter = new CityExpAdapter(_mActivity, cityExpResponse, new OnGridItemClickListener<CityExpBean>() {
             @Override
             public void onItemClick(CityExpBean expBean) {
                 CityExpDetailFragment cityExpDetailFragment = CityExpDetailFragment.newInstance(expBean);

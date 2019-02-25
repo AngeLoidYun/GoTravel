@@ -19,6 +19,8 @@ import com.orhanobut.logger.Logger;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import butterknife.BindView;
@@ -30,6 +32,8 @@ import me.angeloid.gotravel.R;
 import me.angeloid.gotravel.base.BaseFragment;
 import me.angeloid.gotravel.presenter.LoginFragmentPresenter;
 import me.angeloid.gotravel.view.method.LoginFragmentView;
+import top.zibin.luban.Luban;
+import top.zibin.luban.OnCompressListener;
 
 /**
  * Created by sizuru on 18-3-3.
@@ -60,10 +64,14 @@ public class LoginFragment extends BaseFragment<LoginFragmentPresenter> implemen
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+//        List<String> stringList = new ArrayList<>();
+//        for (int i = 1; i < 11; i++) {
+//            stringList.add(Environment.getExternalStorageDirectory()+"/goTravel/tourattr_"+i+".jpg");
+//        }
 //        Luban.with(getContext())
-//                .load(Environment.getExternalStorageDirectory()+"/mypic/cityexp_4_1.jpg")                                   // 传人要压缩的图片列表
+//                .load(stringList)                                   // 传人要压缩的图片列表
 //                .ignoreBy(100)                                  // 忽略不压缩图片的大小
-//                .setTargetDir(Environment.getExternalStorageDirectory()+"")                        // 设置压缩后文件存储位置
+//                .setTargetDir(Environment.getExternalStorageDirectory()+"/goTravel")                        // 设置压缩后文件存储位置
 //                .setCompressListener(new OnCompressListener() { //设置回调
 //                    @Override
 //                    public void onStart() {
@@ -76,7 +84,6 @@ public class LoginFragment extends BaseFragment<LoginFragmentPresenter> implemen
 //                        // TODO 压缩成功后调用，返回压缩后的图片文件
 //                        ToastUtils.showShort("压缩成功！");
 //                    }
-//
 //                    @Override
 //                    public void onError(Throwable e) {
 //                        // TODO 当压缩过程出现问题时调用
